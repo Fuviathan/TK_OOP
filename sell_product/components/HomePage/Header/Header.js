@@ -5,8 +5,10 @@ import HeaderDown from "./HeaderDown";
 export default function Header() {
   return (
     <>
-      <HeaderUp />
-      <HeaderDown />
+      <div className="relative inset-0 z-10">
+        <HeaderUp />
+        <HeaderDown />
+      </div>
     </>
   );
 }

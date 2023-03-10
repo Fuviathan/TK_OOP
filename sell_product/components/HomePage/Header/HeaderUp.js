@@ -5,23 +5,23 @@ import { SearchIcon } from "@heroicons/react/solid";
 export default function HeaderUp() {
   return (
     <div className="bg-gray-900">
-      <div className="flex justify-between items-center h-10 px-4 mx-auto max-w-7xl">
-        <p className="text-white text-center">
+      <div className="flex items-center justify-between h-10 px-4 mx-auto max-w-7xl">
+        <p className="text-center text-white">
           Get free delivery on orders over $100
         </p>
         <div className="flex items-center space-x-6">
-          <a
-            href="#"
+          <Link
+            href="/signin"
             className="text-sm font-medium text-white hover:text-gray-300"
           >
             Sign in
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/register"
             className="text-sm font-medium text-white hover:text-gray-300"
           >
             Create an account
-          </a>
+          </Link>
         </div>
       </div>
     </div>
