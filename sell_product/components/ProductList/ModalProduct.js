@@ -16,7 +16,7 @@ const product = {
 export default function ModalProduct({isVisible, onClose}) {
   if (!isVisible) return null;
   return (
-    <div className="inset-0 z-30 flex items-center justify-center bg-gray-500 bg-opacity-60">
+    <div className="fixed inset-0 z-20 flex items-center justify-center w-screen h-screen bg-gray-700 bg-opacity-70">
       <div className="flex w-full text-base text-left transition transform md:inline-block md:max-w-2xl md:px-4 md:my-8 md:align-middle lg:max-w-4xl">
         <div className="relative flex items-center w-full px-4 pb-8 overflow-hidden bg-white shadow-2xl pt-14 sm:px-6 sm:pt-8 md:p-6 lg:p-8">
           <button

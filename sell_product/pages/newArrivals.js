@@ -1,12 +1,12 @@
 import Header from "../components/HomePage/Header/Header";
-import ProjuctList from "../components/ProductList/ProjuctList";
+import ProductList from "../components/ProductList/ProductList";
 
-export default function women() {
+export default function newArrivals() {
   return (
     <>
       <div className="relative z-10">
         <Header />
-        <ProjuctList />
+        <ProductList />
       </div>
     </>
   );

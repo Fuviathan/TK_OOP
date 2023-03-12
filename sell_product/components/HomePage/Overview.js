@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link'
 
 export default function Overview() {
   return (
@@ -23,12 +24,12 @@ export default function Overview() {
           options from our summer small-batch release while they're still in
           stock.
         </p>
-        <a
-          href="#"
+        <Link
+          href="/newArrivals"
           className="inline-block px-8 py-3 mt-8 text-base font-medium text-gray-900 bg-white border border-transparent rounded-md hover:bg-gray-100"
         >
           Shop New Arrivals
-        </a>
+        </Link>
       </div>
     </>
   );

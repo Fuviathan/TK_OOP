@@ -11,13 +11,13 @@ export default function HeaderUp() {
         </p>
         <div className="flex items-center space-x-6">
           <Link
-            href="/signin"
+            href="/signIn"
             className="text-sm font-medium text-white hover:text-gray-300"
           >
             Sign in
           </Link>
           <Link
-            href="/register"
+            href="/signUp"
             className="text-sm font-medium text-white hover:text-gray-300"
           >
             Create an account

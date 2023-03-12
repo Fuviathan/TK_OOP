@@ -13,17 +13,16 @@ const product = {
   imageAlt: "Back angled view with bag open and handles to the side.",
 };
 
-export default function index() {
-  const [showModal, setShowModal] = useState(false)
-  if (!showModal) return null;
+export default function ModalProduct({isVisible, onClose}) {
+  if (!isVisible) return null;
   return (
-    <div className="flex items-center justify-center w-screen h-screen bg-gray-500 bg-opacity-60">
+    <div className="inset-0 z-50 flex items-center justify-center w-screen h-screen bg-gray-500 bg-opacity-60">
       <div className="flex w-full text-base text-left transition transform md:inline-block md:max-w-2xl md:px-4 md:my-8 md:align-middle lg:max-w-4xl">
         <div className="relative flex items-center w-full px-4 pb-8 overflow-hidden bg-white shadow-2xl pt-14 sm:px-6 sm:pt-8 md:p-6 lg:p-8">
           <button
             type="button"
             className="absolute text-gray-400 top-4 right-4 hover:text-gray-500 sm:top-8 sm:right-6 md:top-6 md:right-6 lg:top-8 lg:right-8"
-            onClick={() => setShowModal(false)}
+            onClick={() => onClose()}
           >
             <XIcon className="w-6 h-6" aria-hidden="true" />
           </button>
@@ -56,7 +55,7 @@ export default function index() {
                   <button
                     type="submit"
                     className="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => onClose()}
                   >
                     Add to cart
                   </button>

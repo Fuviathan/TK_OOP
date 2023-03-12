@@ -7,9 +7,9 @@ import { UserIcon } from '@heroicons/react/outline'
 const navigation = [
   { name: "Home", href: "/homePage" },
   { name: "Women", href: "/women" },
-  { name: "Men", href: "#" },
-  { name: "New Arrivals", href: "#" },
-  { name: "Trending", href: "#" },
+  { name: "Men", href: "/men" },
+  { name: "New Arrivals", href: "/newArrivals" },
+  { name: "Trending", href: "/trending" },
 ];
 
 export default function Header() {
