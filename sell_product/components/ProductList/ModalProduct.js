@@ -1,17 +1,21 @@
 import { useState } from "react";
 import { XIcon } from "@heroicons/react/outline";
+import img from "../Img/FocusPaperRefil.png"
+import Image from 'next/image'
 
 const product = {
-  name: "Zip Tote Basket",
-  price: "$220",
-  rating: 3.9,
+  name: "Focus Paper Refil",
+  price: "$13",
   href: "#",
   description:
     "The Zip Tote Basket is the perfect midpoint between shopping tote and comfy backpack. With convertible straps, you can hand carry, should sling, or backpack this convenient and spacious bag. The zip top and durable canvas construction keeps your goods protected for all-day use.",
   imageSrc:
-    "https://tailwindui.com/img/ecommerce-images/product-page-03-product-04.jpg",
+    img,
   imageAlt: "Back angled view with bag open and handles to the side.",
 };
+
+
+console.log(img)
 
 export default function ModalProduct({isVisible, onClose}) {
   if (!isVisible) return null;
@@ -30,10 +34,12 @@ export default function ModalProduct({isVisible, onClose}) {
           <div className="grid items-start w-full grid-cols-1 gap-y-8 gap-x-6 sm:grid-cols-12 lg:gap-x-8">
             <div className="sm:col-span-4 lg:col-span-5">
               <div className="overflow-hidden bg-gray-100 rounded-lg aspect-w-1 aspect-h-1">
-                <img
-                  src={product.imageSrc}
+                <Image
+                  src={img}
                   alt={product.imageAlt}
-                  className="object-cover object-center"
+                  width={0}
+                  height={0}
+                  className="object-cover object-center border shadow-sm"
                 />
               </div>
             </div>

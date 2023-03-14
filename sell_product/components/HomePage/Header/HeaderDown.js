@@ -31,10 +31,10 @@ export default function Header() {
             </div>
           </div>
           <div className="flex items-center">
-            <button href="#" className="p-2 ml-2 text-white hover:opacity-70">
+            <Link href="/search" className="p-2 ml-2 text-white hover:opacity-70">
               <span className="sr-only">Search</span>
               <SearchIcon className="w-6 h-6" aria-hidden="true" />
-            </button>
+            </Link>
             <a
               href="#"
               className="p-2 ml-4 text-white hover:opacity-70"

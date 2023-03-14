@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/HomePage/Header/Header";
-import { CheckIcon, ClockIcon } from "@heroicons/react/solid";
+import { SearchCircleIcon, ClockIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 
 const products = [
@@ -40,25 +40,29 @@ const products = [
   },
 ];
 
-export default function shoppingcart() {
+export default function search() {
   return (
     <>
       <Header />
       <div className="max-w-2xl px-4 py-16 mx-auto sm:py-24 sm:px-6 lg:px-0">
         <h1 className="text-3xl font-extrabold tracking-tight text-center text-gray-900 sm:text-4xl">
-          Shopping Cart
+          Search
         </h1>
+        <div className="relative shadow-sm">
+          <input
+            type="text"
+            name="product name"
+            placeholder="Product name"
+            className="block w-full px-4 py-2 mt-4 border-2 rounded-full placeholder:italic placeholder:text-lg"
+          />
+          <div className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 cursor-pointer hover:opacity-80">
+            <SearchCircleIcon className="w-7 h-7" />
+          </div>
+        </div>
 
-        <div className="mt-12">
-          <section aria-labelledby="cart-heading">
-            <h2 id="cart-heading" className="sr-only">
-              Items in your shopping cart
-            </h2>
-
-            <ul
-              role="list"
-              className="border-t border-b border-gray-200 divide-y divide-gray-200"
-            >
+        <div className="mt-8">
+          <section>
+            <ul className="border-t border-b border-gray-200 divide-y divide-gray-200">
               {products.map((product) => (
                 <li key={product.id} className="flex py-6">
                   <div className="flex-shrink-0">
@@ -91,48 +95,20 @@ export default function shoppingcart() {
                         {product.size}
                       </p>
                     </div>
-
-                    <div className="flex items-end justify-between flex-1 mt-4">
-                      <div></div>
-                      <div className="ml-4">
-                        <button
-                          type="button"
-                          className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
-                        >
-                          <span>Remove</span>
-                        </button>
-                      </div>
-                    </div>
                   </div>
                 </li>
               ))}
             </ul>
           </section>
 
-          {/* Order summary */}
-          <section aria-labelledby="summary-heading" className="mt-10">
-            <h2 id="summary-heading" className="sr-only">
-              Order summary
-            </h2>
-
-            <div>
-              <dl className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <dt className="text-base font-medium text-gray-900">Total</dt>
-                  <dd className="ml-4 text-base font-medium text-gray-900">
-                    $96.00
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
+          <section className="mt-10">
             <div className="mt-10">
               <Link
-                href='/donePurchase'
+                href=""
                 type="submit"
                 className="w-full px-4 py-3 text-base font-medium text-center text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
               >
-                Checkout
+                Load more
               </Link>
             </div>
           </section>

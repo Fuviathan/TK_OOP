@@ -40,7 +40,6 @@ const products1 = [
     imageAlt:
       "Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop.",
   },
-
   // More products...
 ];
 

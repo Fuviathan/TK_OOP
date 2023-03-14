@@ -15,7 +15,6 @@ export default function signin() {
               </div>
 
               <form className="m-6">
-                {/* <input name="csrfToken" type="hidden" defaultValue={csrfToken} /> */}
                 <label className="block font-bold leading-normal uppercase text-gray-logText">
                   email
                 </label>

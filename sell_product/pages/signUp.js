@@ -46,7 +46,7 @@ export default function signin() {
                   className="w-full p-2 my-2 mb-5 border border-solid rounded-lg outline-none bg-gray-50"
                   type="password"
                   required
-                  placeholder="Password"
+                  placeholder="Confirm password"
                 ></input>
                 
                 <Link
